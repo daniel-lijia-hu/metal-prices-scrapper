@@ -3,6 +3,7 @@
 import requests
 from bs4 import BeautifulSoup
 import csv
+import datetime as dt
 
 # Links where the data comes from
 
