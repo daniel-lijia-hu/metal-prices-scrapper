@@ -58,7 +58,7 @@ def metals_plot(df, met_list):
     return
  
 # 1. Data reading and some exploratory data analysis
-file = '/metals.csv'
+file = 'metals.csv'
 
 # Read the csv file and parse str to date
 df = pd.read_csv(file, sep=';', decimal=',')
