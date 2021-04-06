@@ -12,7 +12,7 @@ urls = ["https://finance.yahoo.com/quote/ALI%3DF/history?p=ALI%3DF",
        "https://finance.yahoo.com/quote/GC%3DF/history?p=GC%3DF",
        "https://finance.yahoo.com/quote/SI%3DF/history?p=SI%3DF"]
        
-# The following script will obtain the data from the latest 30 days
+# The following script will obtain the data from the latest 100 days
 values_to_csv = {}       
 for url in range(0, len(urls)):
     page = requests.get(urls[url]).content
