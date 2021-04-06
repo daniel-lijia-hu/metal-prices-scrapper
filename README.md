@@ -14,7 +14,7 @@ MetalPriceScrapper.py: serveix per obtenir les dades dels últims preus mitjanç
 
 ### Fitxers csv
 metals.csv: arxiu que llegeix l'script MetalHistoricData.py per representar gràficament les dades històrqiues
-metals_latest_data.csv: output de MetalPriceScrapper.py
+metals_latest_data.csv: output de MetalPriceScrapper.py (també obtenible, a dia 6 d'abril de 2021, al següent link) http://doi.org/10.5281/zenodo.4667668
 
 ### Fitxers PDF
 report.pdf: arxiu que respon les preguntes plantejades de la pràctica 1
