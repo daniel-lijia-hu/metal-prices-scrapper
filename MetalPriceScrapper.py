@@ -14,8 +14,8 @@ urls = ["https://finance.yahoo.com/quote/ALI%3DF/history?p=ALI%3DF",
        
 # The following script will obtain the data from the latest 100 days
 values_to_csv = {}       
-for url in range(0, len(urls)):
-    page = requests.get(urls[url]).content
+for pg, url in enumerate(urls):
+    page = requests.get(url).content
     soup = BeautifulSoup (page, 'lxml')
     all_data = soup.find_all('tbody')
     rows = all_data[0].find_all('tr')
@@ -26,10 +26,10 @@ for url in range(0, len(urls)):
         if day not in values_to_csv.keys():
             values_to_csv[day] = [None, None, None, None]
         if values[1].text == '-':
-            values_to_csv[day][url] = None
+            values_to_csv[day][pg] = None
         else:
             cost = values[1].text.replace(',',"").replace('.',",")
-            values_to_csv[day][url] = cost
+            values_to_csv[day][pg] = cost
             
 # The following script writes a .csv with the latest prices
 csv_columns = ['Day', 'Al Price', 'Cu Price', 'Au Price', 'Ag Price']
